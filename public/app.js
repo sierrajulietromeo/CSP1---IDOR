@@ -43,6 +43,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     try {
         const response = await fetch('/api/login', {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -67,7 +68,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 // Logout handler
 document.getElementById('logoutBtn').addEventListener('click', async () => {
     try {
-        await fetch('/api/logout', { method: 'POST' });
+        await fetch('/api/logout', { method: 'POST', credentials: 'include' });
         currentUser = null;
         showPage('loginPage');
         document.getElementById('loginForm').reset();
@@ -103,7 +104,7 @@ async function loadDashboard() {
 async function loadPatientInfo() {
     try {
         // IDOR VULNERABILITY: Change currentUser.id to view other patients
-        const response = await fetch(`/api/patient/${currentUser.id}`);
+        const response = await fetch(`/api/patient/${currentUser.id}`, { credentials: 'include' });
         const patient = await response.json();
 
         if (response.ok) {
@@ -129,7 +130,7 @@ async function loadMedicalRecords() {
 
     try {
         // IDOR VULNERABILITY: Change currentUser.id to view other patients' records
-        const response = await fetch(`/api/records/${currentUser.id}`);
+        const response = await fetch(`/api/records/${currentUser.id}`, { credentials: 'include' });
         const records = await response.json();
 
         if (response.ok && records.length > 0) {
@@ -161,7 +162,7 @@ async function loadTestResults() {
 
     try {
         // IDOR VULNERABILITY: Change currentUser.id to view other patients' test results
-        const response = await fetch(`/api/tests/${currentUser.id}`);
+        const response = await fetch(`/api/tests/${currentUser.id}`, { credentials: 'include' });
         const tests = await response.json();
 
         if (response.ok && tests.length > 0) {
@@ -193,7 +194,7 @@ async function loadAppointments() {
 
     try {
         // IDOR VULNERABILITY: Change currentUser.id to view other patients' appointments
-        const response = await fetch(`/api/appointments/${currentUser.id}`);
+        const response = await fetch(`/api/appointments/${currentUser.id}`, { credentials: 'include' });
         const appointments = await response.json();
 
         if (response.ok && appointments.length > 0) {
@@ -223,7 +224,7 @@ async function loadAppointments() {
 // Check if user is already logged in on page load
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('/api/auth/check');
+        const response = await fetch('/api/auth/check', { credentials: 'include' });
         if (response.ok) {
             // User is still authenticated
             const data = await response.json();
