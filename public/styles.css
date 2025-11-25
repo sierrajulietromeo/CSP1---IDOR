@@ -4,16 +4,16 @@
  */
 
 :root {
-    --primary-colour: #2563eb;
+    --primary-color: #2563eb;
     --primary-dark: #1d4ed8;
-    --secondary-colour: #64748b;
+    --secondary-color: #64748b;
     --background: #f8fafc;
     --card-background: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --border-colour: #e2e8f0;
-    --error-colour: #dc2626;
-    --success-colour: #16a34a;
+    --border-color: #e2e8f0;
+    --error-color: #dc2626;
+    --success-color: #16a34a;
 }
 
 * {
@@ -24,8 +24,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-colour: var(--background);
-    colour: var(--text-primary);
+    background-color: var(--background);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
@@ -47,8 +47,8 @@ body {
 
 /* Navbar */
 .navbar {
-    background-colour: var(--card-background);
-    border-bottom: 1px solid var(--border-colour);
+    background-color: var(--card-background);
+    border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -59,17 +59,17 @@ body {
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: centre;
+    align-items: center;
 }
 
 .navbar h1 {
     font-size: 1.5rem;
-    colour: var(--primary-colour);
+    color: var(--primary-color);
 }
 
 .nav-user {
     display: flex;
-    align-items: centre;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -77,12 +77,12 @@ body {
 #loginPage {
     min-height: 100vh;
     display: flex;
-    align-items: centre;
-    justify-content: centre;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-box {
-    background-colour: var(--card-background);
+    background-color: var(--card-background);
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -91,18 +91,18 @@ body {
 }
 
 .header {
-    text-align: centre;
+    text-align: center;
     margin-bottom: 2rem;
 }
 
 .header h1 {
     font-size: 2rem;
-    colour: var(--primary-colour);
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    colour: var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 1.1rem;
 }
 
@@ -115,21 +115,21 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    colour: var(--text-primary);
+    color: var(--text-primary);
 }
 
 .form-group input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--border-colour);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-colour 0.2s;
+    transition: border-color 0.2s;
 }
 
 .form-group input:focus {
     outline: none;
-    border-colour: var(--primary-colour);
+    border-color: var(--primary-color);
 }
 
 /* Buttons */
@@ -140,32 +140,32 @@ body {
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-colour 0.2s;
+    transition: background-color 0.2s;
 }
 
 .btn-primary {
-    background-colour: var(--primary-colour);
-    colour: white;
+    background-color: var(--primary-color);
+    color: white;
     width: 100%;
 }
 
 .btn-primary:hover {
-    background-colour: var(--primary-dark);
+    background-color: var(--primary-dark);
 }
 
 .btn-secondary {
-    background-colour: var(--secondary-colour);
-    colour: white;
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .btn-secondary:hover {
-    background-colour: #475569;
+    background-color: #475569;
 }
 
 /* Error Messages */
 .error-message {
-    colour: var(--error-colour);
-    background-colour: #fee2e2;
+    color: var(--error-color);
+    background-color: #fee2e2;
     padding: 0.75rem;
     border-radius: 4px;
     margin-bottom: 1rem;
@@ -180,13 +180,13 @@ body {
 .demo-credentials {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--border-colour);
+    border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
-    colour: var(--text-secondary);
+    color: var(--text-secondary);
 }
 
 .demo-credentials code {
-    background-colour: var(--background);
+    background-color: var(--background);
     padding: 0.2rem 0.4rem;
     border-radius: 3px;
     font-family: monospace;
@@ -199,7 +199,7 @@ body {
 
 /* Cards */
 .card {
-    background-colour: var(--card-background);
+    background-color: var(--card-background);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -209,8 +209,8 @@ body {
 .card h2 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    colour: var(--text-primary);
-    border-bottom: 2px solid var(--primary-colour);
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
 }
 
@@ -228,7 +228,7 @@ body {
 
 .info-item .label {
     font-weight: 600;
-    colour: var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 0.25rem;
 }
@@ -242,29 +242,29 @@ body {
 
 .data-item {
     padding: 1rem;
-    background-colour: var(--background);
+    background-color: var(--background);
     border-radius: 6px;
-    border-left: 4px solid var(--primary-colour);
+    border-left: 4px solid var(--primary-color);
 }
 
 .data-item .item-header {
     font-weight: 600;
-    colour: var(--text-primary);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
 }
 
 .data-item .item-date {
-    colour: var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
 .data-item .item-details {
-    colour: var(--text-primary);
+    color: var(--text-primary);
 }
 
 .data-item .item-notes {
-    colour: var(--text-secondary);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     margin-top: 0.5rem;
     font-style: italic;
@@ -272,14 +272,14 @@ body {
 
 /* Loading & Empty States */
 .loading {
-    text-align: centre;
-    colour: var(--text-secondary);
+    text-align: center;
+    color: var(--text-secondary);
     padding: 2rem;
 }
 
 .empty {
-    text-align: centre;
-    colour: var(--text-secondary);
+    text-align: center;
+    color: var(--text-secondary);
     padding: 2rem;
 }
 
@@ -288,15 +288,15 @@ body {
     .container {
         padding: 1rem;
     }
-    
+
     .nav-content {
         padding: 0 1rem;
     }
-    
+
     .login-box {
         padding: 1.5rem;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
     }
