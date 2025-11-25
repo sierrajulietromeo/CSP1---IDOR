@@ -1,0 +1,19 @@
+{
+  "name": "idor-demo-healthtrack",
+  "version": "1.0.0",
+  "description": "Educational application demonstrating IDOR vulnerabilities in a medical portal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "init": "node init-db.js",
+    "reset": "node reset.js"
+  },
+  "keywords": ["idor", "security", "penetration-testing", "education"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.2.2",
+    "cookie-parser": "^1.4.6"
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthTrack Medical Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="container">
+            <div class="login-box">
+                <div class="header">
+                    <h1>🏥 HealthTrack</h1>
+                    <p class="subtitle">Medical Portal</p>
+                </div>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required autocomplete="username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                    </div>
+                    
+                    <div id="loginError" class="error-message"></div>
+                    
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                
+                <div class="demo-credentials">
+                    <p><strong>Demo Credentials:</strong></p>
+                    <p>Username: <code>jsmith</code> | Password: <code>password123</code></p>
+                    <p>Username: <code>ejones</code> | Password: <code>password123</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <nav class="navbar">
+            <div class="nav-content">
+                <h1>🏥 HealthTrack</h1>
+                <div class="nav-user">
+                    <span id="currentUserName">Patient</span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container dashboard">
+            <!-- Patient Information Card -->
+            <div class="card">
+                <h2>Patient Information</h2>
+                <div id="patientInfo" class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Name:</span>
+                        <span id="patientName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">NHS Number:</span>
+                        <span id="nhsNumber">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Date of Birth:</span>
+                        <span id="dob">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span id="email">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Phone:</span>
+                        <span id="phone">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Address:</span>
+                        <span id="address">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medical Records Card -->
+            <div class="card">
+                <h2>Medical Records</h2>
+                <div id="medicalRecords" class="data-list">
+                    <p class="loading">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Test Results Card -->
+            <div class="card">
+                <h2>Test Results</h2>
+                <div id="testResults" class="data-list">
+                    <p class="loading">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Appointments Card -->
+            <div class="card">
+                <h2>Upcoming Appointments</h2>
+                <div id="appointments" class="data-list">
+                    <p class="loading">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
