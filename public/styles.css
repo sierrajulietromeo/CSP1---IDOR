@@ -31,11 +31,11 @@ body {
 
 /* Page Management */
 .page {
-    display: none;
+    display: none !important;
 }
 
 .page.active {
-    display: block;
+    display: block !important;
 }
 
 /* Container */
@@ -74,9 +74,9 @@ body {
 }
 
 /* Login Page */
-#loginPage {
+#loginPage.active {
     min-height: 100vh;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
