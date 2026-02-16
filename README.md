@@ -44,12 +44,12 @@ An educational web application designed to demonstrate **Insecure Direct Object 
    ```
 (This may take a few minutes to run, but then all will be well)
 
-   
+   Then to initialise the database:
 
-3. **Codespaces will automatically initialise the database. If for some reason it doesn't, you can run:**
    ```bash
    npm run init
-   ```
+
+
 
 3. **Start the server:**
    ```bash
