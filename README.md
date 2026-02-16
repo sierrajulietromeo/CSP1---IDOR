@@ -36,10 +36,15 @@ An educational web application designed to demonstrate **Insecure Direct Object 
 
 1. **Open the application in GitHub Codespaces:**
 
-2. **Codespaces will automatically install dependencies. If for some reason it doesn't, you can run:**
+2. **Codespaces will try to automatically install dependencies: **
+   If for some reason it fails (you get a ❌) then:
    ```bash
+   nvm install 16
    npm install
    ```
+(This may take a few minutes to run, but then all will be well)
+
+   
 
 3. **Codespaces will automatically initialise the database. If for some reason it doesn't, you can run:**
    ```bash
